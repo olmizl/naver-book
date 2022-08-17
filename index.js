@@ -25,8 +25,8 @@ app.get("/news", (req, res) => {
   axios({
     url: `https://openapi.naver.com/v1/search/news.json?query=${queryTxt}&display=100`,
     headers: {
-      "X-Naver-Client-Id": "BkFyr1H70ohFIy1FhLfr",
-      "X-Naver-Client-Secret": "5fG_uUcTsR",
+      "X-Naver-Client-Id": NAVER_ID,
+      "X-Naver-Client-Secret": NAVER_SECRET_ID,
     },
   }).then(function (response) {
     res.json(response.data);
@@ -40,8 +40,8 @@ app.get("/book/:bookname", (req, res) => {
   axios({
     url: `https://openapi.naver.com/v1/search/book.json?query=${queryTxt}`,
     headers: {
-      "X-Naver-Client-Id": "BkFyr1H70ohFIy1FhLfr",
-      "X-Naver-Client-Secret": "5fG_uUcTsR",
+      "X-Naver-Client-Id": NAVER_ID,
+      "X-Naver-Client-Secret": NAVER_SECRET_ID,
     },
   }).then(function (response) {
     // console.log(response.data);
@@ -55,8 +55,8 @@ app.get("/book02", (req, res) => {
   axios({
     url: `https://openapi.naver.com/v1/search/book.json?query=${queryTxt}`,
     headers: {
-      "X-Naver-Client-Id": "BkFyr1H70ohFIy1FhLfr",
-      "X-Naver-Client-Secret": "5fG_uUcTsR",
+      "X-Naver-Client-Id": NAVER_ID,
+      "X-Naver-Client-Secret": NAVER_SECRET_ID,
     },
   }).then(function (response) {
     // console.log(response.data);
