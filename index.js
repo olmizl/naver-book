@@ -1,7 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
-const { query } = require("express");
+// const { query } = require("express");
 const dotenv = require("dotenv").config();
 const NAVER_ID = process.env.NAVER_ID;
 const NAVER_SECRET_ID = process.env.NAVER_SECRET_ID;
@@ -11,6 +11,7 @@ const app = express();
 app.set("port", process.env.PORT || 8099); //포트 번호 지정
 const PORT = app.get("port");
 app.use(cors());
+app.use(express.json());
 
 // 라우팅 (주소를 치고 들어오면 보일화면or텍스트) //
 app.get("/", (req, res) => {
