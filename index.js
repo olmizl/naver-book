@@ -91,5 +91,5 @@ app.get("/movie/:moviename", (req, res) => {
 
 //들을것이다 //포트번호지정한 곳에서  node가 할 기능
 app.listen(PORT, function () {
-  console.log(`${port}에서 서버 대기중`);
+  console.log(`${PORT}에서 서버 대기중`);
 });
