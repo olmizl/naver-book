@@ -1,13 +1,13 @@
 const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
-// const { query } = require("express");
+const { query } = require("express");
 const dotenv = require("dotenv").config();
 const NAVER_ID = process.env.NAVER_ID;
 const NAVER_SECRET_ID = process.env.NAVER_SECRET_ID;
 
 const app = express();
-
+6;
 app.set("port", process.env.PORT || 8099); //포트 번호 지정
 const PORT = app.get("port");
 app.use(cors());
@@ -77,7 +77,7 @@ app.get("/login", (req, res) => {
 app.get("/movie/:moviename", (req, res) => {
   const queryTxt = encodeURIComponent(req.params.moviename);
   // const display = encodeURIComponent(req.params.display);
-  // console.log(req.params.moviename);
+  console.log(req.params.moviename);
   axios({
     url: `https://openapi.naver.com/v1/search/movie.json?query=${queryTxt}`,
     headers: {
