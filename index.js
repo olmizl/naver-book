@@ -14,7 +14,7 @@ app.use(cors());
 
 // 라우팅 (주소를 치고 들어오면 보일화면or텍스트) //
 app.get("/", (req, res) => {
-  res.send("hello node");
+  res.send("hello node book");
 });
 
 //(쿼리) : 127.0.0.1:8099/news?news=코로나
