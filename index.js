@@ -9,7 +9,7 @@ const NAVER_SECRET_ID = process.env.NAVER_SECRET_ID;
 const app = express();
 
 app.set("port", process.env.PORT || 8099); //포트 번호 지정
-const port = app.get("port");
+const PORT = app.get("port");
 app.use(cors());
 
 // 라우팅 (주소를 치고 들어오면 보일화면or텍스트) //
@@ -90,6 +90,6 @@ app.get("/movie/:moviename", (req, res) => {
 });
 
 //들을것이다 //포트번호지정한 곳에서  node가 할 기능
-app.listen(port, function () {
-  console.log(`${port}에서 서버 대기중`);
+app.listen(PORT, function () {
+  console.log(`${PORT}에서 서버 대기중`);
 });
